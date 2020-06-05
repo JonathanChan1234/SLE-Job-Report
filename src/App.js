@@ -6,11 +6,13 @@ import './App.css';
 
 import {
     CLIENT_ID,
-    SHEET_ID,
+    OLD_SHEET_ID,
+    NEW_SHEET_ID,
     REPORT_RANGE,
     STAFF_LIST_RANGE,
 } from './utils/constants';
 import GoogleSheetWrapper from './components/GoogleSheetWrapper';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const SheetsDemo = ({ clientId, apiKey }) => (
     <GoogleSheetsApi clientId={clientId} apiKey={apiKey}>
@@ -19,7 +21,7 @@ const SheetsDemo = ({ clientId, apiKey }) => (
                 {apiLoading ? (
                     <CircularProgress />
                 ) : error ? (
-                    <div>{error}</div>
+                    <div>{JSON.stringify(error, null, 2)}</div>
                 ) : signedIn ? (
                     <Button
                         variant='contained'
@@ -39,7 +41,8 @@ const SheetsDemo = ({ clientId, apiKey }) => (
                     <GoogleSheetWrapper
                         staff_list_range={STAFF_LIST_RANGE}
                         report_range={REPORT_RANGE}
-                        id={SHEET_ID}
+                        old_sheet_id={OLD_SHEET_ID}
+                        new_sheet_id={NEW_SHEET_ID}
                     />
                 )}
             </div>
@@ -50,15 +53,17 @@ const SheetsDemo = ({ clientId, apiKey }) => (
 function App() {
     return (
         <div className='App'>
-            <Box
-                display='flex'
-                flexDirection='column'
-                p={1}
-                m={1}
-                bgcolor='background.paper'>
-                <h2>SLE Job Report</h2>
-                <SheetsDemo clientId={CLIENT_ID} apiKey='' />
-            </Box>
+            <ErrorBoundary>
+                <Box
+                    display='flex'
+                    flexDirection='column'
+                    p={1}
+                    m={1}
+                    bgcolor='background.paper'>
+                    <h2>SLE Job Report</h2>
+                    <SheetsDemo clientId={CLIENT_ID} apiKey='' />
+                </Box>
+            </ErrorBoundary>
         </div>
     );
 }

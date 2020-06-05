@@ -13,7 +13,7 @@ import { getTodayDate, compareRecordDate } from '../utils/utils';
 
 const useStyles = makeStyles((theme) => ({
     table: {
-        minWidth: 300,
+        minWidth: 600,
         maxWidth: 700,
     },
     container: {
@@ -38,7 +38,7 @@ const DataTable = ({ record, staff_list }) => {
     const renderStaffResponseList = () => {
         const jobReport = record.slice(1, record.length);
         const dailyJobReport = jobReport.filter((record) =>
-            compareRecordDate(record[1], reportDate)
+            compareRecordDate(record.orderDate, reportDate)
         );
         const dailyStaffResponseList = staff_list.map((staff) => ({
             name: staff,
@@ -46,7 +46,7 @@ const DataTable = ({ record, staff_list }) => {
         }));
         dailyJobReport.forEach((record) => {
             dailyStaffResponseList.forEach((staff) => {
-                if (staff.name === record[2]) {
+                if (staff.name === record.name) {
                     staff.response++;
                 }
             });
@@ -88,21 +88,18 @@ const DataTable = ({ record, staff_list }) => {
                         }}
                     />
                 </form>
-                <h4>{}</h4>
             </Box>
 
             <TableContainer component={Paper}>
-                <Box display='flex' justifyContent='center'>
-                    <Table className={classes.table} size='small'>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>Staff Name</TableCell>
-                                <TableCell>No of Response</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>{renderStaffResponseList()}</TableBody>
-                    </Table>
-                </Box>
+                <Table className={classes.table} size='small'>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Staff Name</TableCell>
+                            <TableCell>No of Response</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>{renderStaffResponseList()}</TableBody>
+                </Table>
             </TableContainer>
         </div>
     );
