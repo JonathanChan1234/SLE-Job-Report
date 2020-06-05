@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sle-job-report/static/css/main.5f361e03.chunk.css",
+    "main.js": "/sle-job-report/static/js/main.bda83766.chunk.js",
+    "main.js.map": "/sle-job-report/static/js/main.bda83766.chunk.js.map",
+    "runtime-main.js": "/sle-job-report/static/js/runtime-main.9a074ea9.js",
+    "runtime-main.js.map": "/sle-job-report/static/js/runtime-main.9a074ea9.js.map",
+    "static/js/2.538ad216.chunk.js": "/sle-job-report/static/js/2.538ad216.chunk.js",
+    "static/js/2.538ad216.chunk.js.map": "/sle-job-report/static/js/2.538ad216.chunk.js.map",
+    "index.html": "/sle-job-report/index.html",
+    "precache-manifest.56f1e179dc5736e36534ac424720b9cd.js": "/sle-job-report/precache-manifest.56f1e179dc5736e36534ac424720b9cd.js",
+    "service-worker.js": "/sle-job-report/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/sle-job-report/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.538ad216.chunk.js.LICENSE.txt": "/sle-job-report/static/js/2.538ad216.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a074ea9.js",
+    "static/js/2.538ad216.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.bda83766.chunk.js"
+  ]
+}
