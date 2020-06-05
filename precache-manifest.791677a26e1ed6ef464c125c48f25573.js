@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a11e0dc4a0cc5564443fb71da995d853",
+    "revision": "73413d844f640154cae497580a828415",
     "url": "/SLE-Job-Report/index.html"
   },
   {
-    "revision": "295f9c39afcc65fef7f4",
+    "revision": "89f9c6ad61715c8ba15b",
     "url": "/SLE-Job-Report/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SLE-Job-Report/static/js/2.538ad216.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "295f9c39afcc65fef7f4",
-    "url": "/SLE-Job-Report/static/js/main.1944660b.chunk.js"
+    "revision": "89f9c6ad61715c8ba15b",
+    "url": "/SLE-Job-Report/static/js/main.002d57ad.chunk.js"
   },
   {
     "revision": "7ffbb8d025b380bc4a46",
