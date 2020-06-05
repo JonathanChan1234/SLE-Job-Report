@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SLE-Job-Report/precache-manifest.af4b7c3047b28322796a0403e88204fa.js"
+  "/SLE-Job-Report/precache-manifest.a5176e4b98ddeee6c9dda97227b9fd82.js"
 );
 
 self.addEventListener('message', (event) => {
